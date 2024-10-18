@@ -1,0 +1,228 @@
+.prompt-thin { font-family: "Prompt", sans-serif; font-weight: 100; font-style: normal; }
+.prompt-extralight { font-family: "Prompt", sans-serif; font-weight: 200; font-style: normal; }
+.prompt-light { font-family: "Prompt", sans-serif; font-weight: 300; font-style: normal; }
+.prompt-regular { font-family: "Prompt", sans-serif; font-weight: 400; font-style: normal; }
+.prompt-medium { font-family: "Prompt", sans-serif; font-weight: 500; font-style: normal; }
+.prompt-semibold { font-family: "Prompt", sans-serif; font-weight: 600; font-style: normal; }
+.prompt-bold { font-family: "Prompt", sans-serif; font-weight: 700; font-style: normal; }
+.prompt-extrabold { font-family: "Prompt", sans-serif; font-weight: 800; font-style: normal; }
+.prompt-black { font-family: "Prompt", sans-serif; font-weight: 900; font-style: normal; }
+.prompt-thin-italic { font-family: "Prompt", sans-serif; font-weight: 100; font-style: italic; }
+.prompt-extralight-italic { font-family: "Prompt", sans-serif; font-weight: 200; font-style: italic; }
+.prompt-light-italic { font-family: "Prompt", sans-serif; font-weight: 300; font-style: italic; }
+.prompt-regular-italic { font-family: "Prompt", sans-serif; font-weight: 400; font-style: italic; }
+.prompt-medium-italic { font-family: "Prompt", sans-serif; font-weight: 500; font-style: italic; }
+.prompt-semibold-italic { font-family: "Prompt", sans-serif; font-weight: 600; font-style: italic; }
+.prompt-bold-italic { font-family: "Prompt", sans-serif; font-weight: 700; font-style: italic; }
+.prompt-extrabold-italic { font-family: "Prompt", sans-serif; font-weight: 800; font-style: italic; }
+.prompt-black-italic { font-family: "Prompt", sans-serif; font-weight: 900; font-style: italic; }
+
+body {
+  background:
+      conic-gradient(at 10% 50%,#0000 75%,#a5c5f8 0),
+      conic-gradient(at 10% 50%,#0000 75%,#a5c5f8 0) calc(1*12px) calc(3*12px),
+      conic-gradient(at 10% 50%,#0000 75%,#a5c5f8 0) calc(2*12px) calc(1*12px),
+      conic-gradient(at 10% 50%,#0000 75%,#a5c5f8 0) calc(3*12px) calc(4*12px),
+      conic-gradient(at 10% 50%,#0000 75%,#a5c5f8 0) calc(4*12px) calc(2*12px),
+      conic-gradient(at 50% 10%,#0000 75%,#a5c5f8 0) 0 calc(4*12px),
+      conic-gradient(at 50% 10%,#0000 75%,#a5c5f8 0) calc(1*12px) calc(2*12px),
+      conic-gradient(at 50% 10%,#0000 75%,#a5c5f8 0) calc(2*12px) 0,
+      conic-gradient(at 50% 10%,#0000 75%,#a5c5f8 0) calc(3*12px) calc(3*12px),
+      conic-gradient(at 50% 10%,#0000 75%,#a5c5f8 0) calc(4*12px) calc(1*12px),
+      #b11aed;
+background-size: 60px 60px;
+
+  position: relative; 
+  font-family: "Prompt", sans-serif; 
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 0.8s ease-out; 
+}
+
+.content {
+  width: 600px;
+  height: 80%;
+  padding: 24px;
+  background: rgba(255,255,255,0.3);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; 
+ 
+}
+
+.title {
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.875rem;
+  margin-bottom: 16px;
+  color: black;
+  text-align: center; 
+}
+
+.description {
+  color: black;
+  text-align: center; 
+} 
+
+.priority-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.priority-buttons button {
+  width: 30%;
+  padding: 8px 0;
+  border: 1px rgb(178, 178, 178) solid;
+  cursor: pointer;
+  color: rgb(22, 21, 21);
+  font-weight: bold;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+.priority-buttons .button-high {
+  background-color: #f8d7da; 
+}
+
+.priority-buttons .button-medium {
+  background-color: #fff3cd; 
+}
+
+.priority-buttons .button-low {
+  background-color: #d4edda; 
+}
+
+.priority-buttons button.active {
+  opacity: 1; 
+  border: 2px solid #000; 
+}
+.todo-actions {
+  display: flex;
+  align-items: center;
+}
+.input {
+  width: 100%; 
+  height: 40px;
+  padding: 0 16px; 
+  border-radius: 8px; 
+  border: 2px solid #e5e7eb; 
+  outline: none; 
+  font-size: 16px;
+  box-sizing: border-box; 
+  background-color: white; 
+  color: black; 
+  transition: border-color 0.3s ease; 
+}
+.check-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-button.checked {
+  background-color: #d4edda; /* Change background when checked */
+  color: green; /* Change color when checked */
+}
+span {
+  flex-grow: 1;
+  padding-right: 10px;
+}
+.check-button:hover {
+  background-color: #e0e0e0;
+}
+.todo-item {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 7px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  width: 100%; 
+  height: 40px; 
+  padding: 0 16px; 
+  margin-top: 16px; 
+  border-radius: 8px; 
+  border: none; 
+  background-color: #a5c5f8; 
+  color: #060606; 
+  font-size: 16px; 
+  cursor: pointer; 
+  box-sizing: border-box; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.button:hover {
+  background-color: #7fadf7; 
+}
+
+.button:active {
+  transform: scale(0.98); 
+}
+
+.remove-button {
+  background-color: #a5c5f8; 
+  color: #0f0f0f; 
+  border: none; 
+  padding: 8px 12px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  font-size: 14px; 
+  font-weight: bold; 
+  margin-left: auto; 
+}
+
+.remove-button:hover {
+  background-color: #7fadf7; 
+}
+
+.remove-button:active {
+  transform: scale(0.95); 
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px); 
+    opacity: 0; 
+  }
+  to {
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
