@@ -22,7 +22,7 @@ const FormInput: React.FC<FormInputProps> = ({ addTodo }) => {
         <input
           type="text"
           className="input"
-          placeholder="Enter your todo"
+          placeholder="What you want to keep here?"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
         />
